@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OkBettiah | Trusted Local Assistance in Bettiah</title>
+<meta name="description" content="Book trusted local assistance in Bettiah for elder care, hospital visits, errands, driver assistance and everyday support. Rs 99 per hour. Easy WhatsApp booking.">
+<meta name="theme-color" content="#0B1B3A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="OkBettiah | Need help in Bettiah? Just WhatsApp us.">
+<meta property="og:description" content="Trusted local help for your family in Bettiah, West Champaran, Bihar. Rs 99 per hour. No app. No account.">
+<meta property="og:locale" content="en_IN">
+<!-- <link rel="icon" type="image/png" href="assets/logo-ok.png"><rect width='100' height='100' rx='24' fill='%230B1B3A'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23FFC93C' font-family='Arial' font-weight='700'>Ok</text></svg>"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{navy:'#0B1B3A',ink:'#071329',honey:'#FFC93C',wa:'#128C4A',wag:'#25D366',mist:'#F2F5FA'},fontFamily:{display:['"Bricolage Grotesque"','system-ui','sans-serif'],sans:['Manrope','system-ui','sans-serif']}}}}</script>
+<style type="text/tailwindcss">
+@layer components{
+ .card{@apply rounded-3xl border border-navy/5 bg-white p-6 shadow-[0_2px_4px_rgba(11,27,58,.04),0_24px_48px_-24px_rgba(11,27,58,.22)]}
+ .btn-wa{@apply inline-flex items-center justify-center gap-2 rounded-full bg-wag px-7 py-4 font-extrabold text-ink shadow-[0_10px_30px_-8px_rgba(37,211,102,.7)] transition hover:-translate-y-0.5 hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white}
+ .btn-navy{@apply inline-flex items-center justify-center rounded-full bg-navy px-5 py-3 text-sm font-bold text-white transition hover:bg-navy/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-honey}
+ .btn-ghost{@apply inline-flex items-center justify-center rounded-full border-2 border-white/25 px-7 py-4 font-bold text-white transition hover:border-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white}
+ .choice{@apply relative flex flex-col items-start gap-1 rounded-2xl border-2 border-slate-200 bg-white px-3 py-3 text-left text-navy transition hover:border-honey aria-pressed:border-navy aria-pressed:bg-honey/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-honey}
+ .field{@apply mt-1 w-full rounded-2xl border-2 border-slate-200 bg-white px-4 py-3 text-navy focus:border-navy focus:outline-none}
+ .err{@apply mt-1 text-sm font-semibold text-red-600}
+ .h2{@apply font-display text-3xl font-extrabold tracking-tight text-navy sm:text-5xl}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*{animation:none!important;transition:none!important}}
+html{scroll-padding-top:5rem}
+.grid-bg{background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.msg{opacity:0;animation:rise .5s ease forwards}
+.msg:nth-child(1){animation-delay:.3s}.msg:nth-child(2){animation-delay:.9s}.msg:nth-child(3){animation-delay:1.5s}
+</style>
+</head>
+<body class="bg-white font-sans text-slate-700 antialiased">
+<a href="#services" class="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-[60] focus:rounded focus:bg-white focus:p-3">Skip to content</a>
+
+<header class="sticky top-0 z-40 bg-ink/95 text-white backdrop-blur">
+ <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
+  <a href="#home" aria-label="OkBettiah home"><img src="assets/logo-wordmark.png" alt="OkBettiah" width="700" height="153" class="h-9 w-auto sm:h-11"></a>
+  <nav class="hidden items-center gap-7 text-sm font-semibold text-white/80 lg:flex" aria-label="Main">
+   <a class="hover:text-white" href="#home">Home</a><a class="hover:text-white" href="#services">Services</a><a class="hover:text-white" href="#how">How It Works</a><a class="hover:text-white" href="#safety">Safety</a><a class="hover:text-white" href="#faq">FAQ</a><a class="hover:text-white" href="#contact">Contact</a></nav>
+  <div class="flex items-center gap-2">
+   <button data-open-booking class="btn-wa !px-4 !py-2.5 text-sm"><span class="hidden sm:inline">Book on WhatsApp</span><span class="sm:hidden">Book on WhatsApp</span></button>
+   <button id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu" class="grid h-11 w-11 place-items-center rounded-xl border border-white/20 lg:hidden">☰</button>
+  </div>
+ </div>
+ <nav id="mobileMenu" class="hidden border-t border-white/10 px-4 py-3 lg:hidden" aria-label="Mobile">
+  <a class="block py-3 font-semibold" href="#home">Home</a><a class="block py-3 font-semibold" href="#services">Services</a><a class="block py-3 font-semibold" href="#how">How It Works</a><a class="block py-3 font-semibold" href="#safety">Safety</a><a class="block py-3 font-semibold" href="#faq">FAQ</a><a class="block py-3 font-semibold" href="#contact">Contact</a></nav>
+</header>
+
+<main>
+<section id="slider" class="relative overflow-hidden" aria-roledescription="carousel" aria-label="Highlights">
+  <div id="sliderTrack" class="flex transition-transform duration-700 ease-out">
+   <div data-slide class="w-full shrink-0" style="background:#FFC93C;color:#071329"><div class="mx-auto flex min-h-[250px] max-w-6xl items-center justify-between gap-6 px-4 py-8 sm:min-h-[280px] sm:px-16">
+    <div class="max-w-2xl"><p class="text-xs font-extrabold uppercase tracking-widest opacity-70">Simple pricing</p><h2 class="mt-2 font-display text-3xl font-extrabold leading-tight sm:text-5xl">Rs 99 per hour. Any service.</h2><p class="mt-2 max-w-xl text-sm opacity-85 sm:text-base">One clear rate for every service. We confirm the final details with you on WhatsApp before we begin.</p>
+     <button data-open-booking class="mt-5 inline-flex rounded-full px-6 py-3 text-sm font-extrabold shadow-lg transition hover:-translate-y-0.5" style="background:#071329;color:#FFC93C">Book on WhatsApp →</button></div>
+    <div class="hidden h-40 w-40 shrink-0 place-items-center rounded-[2.5rem] bg-white/15 text-7xl sm:grid" aria-hidden="true">💰</div></div></div>
+   <div data-slide class="w-full shrink-0" style="background:#1E3A8A;color:#FFFFFF"><div class="mx-auto flex min-h-[250px] max-w-6xl items-center justify-between gap-6 px-4 py-8 sm:min-h-[280px] sm:px-16">
+    <div class="max-w-2xl"><p class="text-xs font-extrabold uppercase tracking-widest opacity-70">Hospital &amp; elder care</p><h2 class="mt-2 font-display text-3xl font-extrabold leading-tight sm:text-5xl">Someone kind by your parents’ side.</h2><p class="mt-2 max-w-xl text-sm opacity-85 sm:text-base">Hospital visits, check-ins, walks and companionship, handled with patience and respect.</p>
+     <button data-service="hospital" class="mt-5 inline-flex rounded-full px-6 py-3 text-sm font-extrabold shadow-lg transition hover:-translate-y-0.5" style="background:#FFFFFF;color:#1E3A8A">Arrange Care →</button></div>
+    <div class="hidden h-40 w-40 shrink-0 place-items-center rounded-[2.5rem] bg-white/15 text-7xl sm:grid" aria-hidden="true">🏥</div></div></div>
+   <div data-slide class="w-full shrink-0" style="background:#0B5D4B;color:#FFFFFF"><div class="mx-auto flex min-h-[250px] max-w-6xl items-center justify-between gap-6 px-4 py-8 sm:min-h-[280px] sm:px-16">
+    <div class="max-w-2xl"><p class="text-xs font-extrabold uppercase tracking-widest opacity-70">Errands</p><h2 class="mt-2 font-display text-3xl font-extrabold leading-tight sm:text-5xl">Bank, market, railway &amp; bus station work.</h2><p class="mt-2 max-w-xl text-sm opacity-85 sm:text-base">Queues, documents, bills and shopping around Bettiah. Please leave them to us.</p>
+     <button data-service="errand" class="mt-5 inline-flex rounded-full px-6 py-3 text-sm font-extrabold shadow-lg transition hover:-translate-y-0.5" style="background:#FFFFFF;color:#0B5D4B">Book an Errand →</button></div>
+    <div class="hidden h-40 w-40 shrink-0 place-items-center rounded-[2.5rem] bg-white/15 text-7xl sm:grid" aria-hidden="true">🏦</div></div></div>
+   <div data-slide class="w-full shrink-0" style="background:#25D366;color:#071329"><div class="mx-auto flex min-h-[250px] max-w-6xl items-center justify-between gap-6 px-4 py-8 sm:min-h-[280px] sm:px-16">
+    <div class="max-w-2xl"><p class="text-xs font-extrabold uppercase tracking-widest opacity-70">Safe start</p><h2 class="mt-2 font-display text-3xl font-extrabold leading-tight sm:text-5xl">Your time starts only after OTP verification.</h2><p class="mt-2 max-w-xl text-sm opacity-85 sm:text-base">Share the OTP with your helper when they arrive. Charges begin from that moment.</p>
+     <button data-goto="otp" class="mt-5 inline-flex rounded-full px-6 py-3 text-sm font-extrabold shadow-lg transition hover:-translate-y-0.5" style="background:#071329;color:#25D366">How the OTP works →</button></div>
+    <div class="hidden h-40 w-40 shrink-0 place-items-center rounded-[2.5rem] bg-white/15 text-7xl sm:grid" aria-hidden="true">🔐</div></div></div>
+  </div>
+  <button id="prevSlide" type="button" aria-label="Previous slide" class="absolute left-2 top-1/2 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-white/80 text-lg font-bold text-ink shadow sm:grid">‹</button>
+  <button id="nextSlide" type="button" aria-label="Next slide" class="absolute right-2 top-1/2 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-white/80 text-lg font-bold text-ink shadow sm:grid">›</button>
+  <div id="sliderDots" class="absolute inset-x-0 bottom-3 flex justify-center gap-2" style="color:inherit"></div>
+</section>
+<section id="home" class="grid-bg relative overflow-hidden bg-navy text-white">
+ <div class="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-honey/20 blur-3xl" aria-hidden="true"></div>
+ <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pb-20 pt-12 lg:grid-cols-[1.1fr_.9fr] lg:pt-20">
+  <div>
+   <p class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-sm font-semibold">📍 Serving Bettiah &amp; nearby areas</p>
+   <h1 class="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-[4.2rem]">Away from Bettiah? Your family still has <span class="text-honey">someone to count on.</span></h1>
+   <p class="mt-5 max-w-xl text-lg text-white/75">Trusted local assistance for your family, elders, hospital visits, bank, mall, shopping, railway station, bus station, park, walking and market errands, and everyday needs in Bettiah, West Champaran, Bihar.</p>
+   <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+    <button data-open-booking class="btn-wa">Book on WhatsApp →</button>
+    <a href="#services" class="btn-ghost">Explore Services</a></div>
+   <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold text-white/80">
+    <span class="rounded-full bg-honey px-4 py-1.5 font-extrabold text-ink">Rs 99 per hour</span><span>✓ Verified by our team</span><span>✓ OTP-verified start</span><span>✓ No app. No account.</span></div>
+  </div>
+  <div class="relative mx-auto w-full max-w-sm" aria-hidden="true">
+   <div class="rounded-[2.5rem] border border-white/15 bg-ink p-3 shadow-2xl">
+    <div class="overflow-hidden rounded-[2rem] bg-[#ECE5DD]">
+     <div class="flex items-center gap-3 bg-[#075E54] px-4 py-3 text-white"><span class="grid h-9 w-9 place-items-center rounded-full bg-honey font-display text-sm font-extrabold text-ink">Ok</span><div class="leading-tight"><p class="text-sm font-bold">OkBettiah</p><p class="text-[11px] text-white/70">WhatsApp</p></div></div>
+     <div class="space-y-2 p-3 text-[13px] text-slate-800">
+      <div class="msg ml-auto w-[85%] rounded-xl rounded-tr-sm bg-[#D9FDD3] p-3 shadow-sm"><b>Service:</b> Elder Care<br><b>Fee:</b> Rs 99 per hour<br><b>Time:</b> Afternoon<br><b>Area:</b> Ganj No. 1, Bettiah<br>Please confirm availability.</div>
+      <div class="msg w-[80%] rounded-xl rounded-tl-sm bg-white p-3 shadow-sm">Namaste! A helper is available this afternoon. Confirming the details with you now. 🙏</div>
+      <div class="msg ml-auto w-fit rounded-xl rounded-tr-sm bg-[#D9FDD3] p-3 shadow-sm">Thank you! 🙂</div></div>
+     <p class="pb-3 text-center text-[10px] text-slate-500">Illustrative example</p></div></div>
+   <div class="absolute -left-4 top-24 hidden rounded-2xl bg-white px-4 py-3 text-sm font-bold text-navy shadow-xl sm:block">✓ Identity-verified helpers</div>
+   <div class="absolute -right-4 bottom-20 hidden rounded-2xl bg-honey px-4 py-3 text-sm font-extrabold text-ink shadow-xl sm:block">Rs 99 / hour</div>
+  </div>
+ </div>
+</section>
+
+<section aria-label="Why people trust us" class="-mt-8 relative z-10 px-4">
+ <ul class="mx-auto grid max-w-6xl grid-cols-2 gap-px overflow-hidden rounded-3xl bg-navy/10 text-sm font-bold text-navy shadow-xl lg:grid-cols-5">
+  <li class="bg-white px-5 py-5">✓ Verified local helpers</li><li class="bg-white px-5 py-5">✓ WhatsApp booking</li><li class="bg-white px-5 py-5">✓ Transparent pricing</li><li class="bg-white px-5 py-5">✓ Human support</li><li class="col-span-2 bg-white px-5 py-5 lg:col-span-1">✓ Bettiah-focused service</li></ul>
+</section>
+
+<section id="services" class="mx-auto max-w-6xl px-4 py-24">
+ <h2 class="h2">Need someone to help your parents in Bettiah?</h2>
+ <p class="mt-3 max-w-2xl text-lg text-slate-600">Tell us what you need. We’ll take it from there. Every service is <strong class="text-navy">Rs 99 per hour</strong>.</p>
+ <div id="serviceGrid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+ <p class="mt-8 rounded-2xl border border-honey/60 bg-honey/15 p-4 text-sm text-navy"><strong>Please note:</strong> Urgent Local Assistance is <strong>not</strong> an ambulance, police, fire or emergency medical service. For genuine emergencies, contact the appropriate emergency service directly.</p>
+</section>
+
+<section id="how" class="bg-mist py-24">
+ <div class="mx-auto max-w-6xl px-4">
+  <h2 class="h2">Four steps. One chat.</h2>
+  <ol class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+   <li class="card"><span class="grid h-11 w-11 place-items-center rounded-2xl bg-navy font-display text-lg font-extrabold text-honey">1</span><h3 class="mt-4 font-display text-xl font-extrabold text-navy">Choose a service</h3><p class="mt-1 text-sm">Tell us what kind of help you need.</p></li>
+   <li class="card"><span class="grid h-11 w-11 place-items-center rounded-2xl bg-navy font-display text-lg font-extrabold text-honey">2</span><h3 class="mt-4 font-display text-xl font-extrabold text-navy">Share your requirement</h3><p class="mt-1 text-sm">Select your preferred date, time and location.</p></li>
+   <li class="card"><span class="grid h-11 w-11 place-items-center rounded-2xl bg-navy font-display text-lg font-extrabold text-honey">3</span><h3 class="mt-4 font-display text-xl font-extrabold text-navy">Continue on WhatsApp</h3><p class="mt-1 text-sm">Your booking details are automatically prepared.</p></li>
+   <li class="card"><span class="grid h-11 w-11 place-items-center rounded-2xl bg-wag font-display text-lg font-extrabold text-ink">4</span><h3 class="mt-4 font-display text-xl font-extrabold text-navy">We confirm</h3><p class="mt-1 text-sm">Our team checks availability and confirms the service with you.</p></li></ol>
+  <p class="mt-8 rounded-2xl bg-navy p-5 text-sm text-white/90"><strong class="text-honey">Request submitted ≠ booking confirmed.</strong> This website does not confirm bookings automatically. Your booking is confirmed on WhatsApp by the OkBettiah team.</p>
+ </div>
+</section>
+
+<section id="otp" class="mx-auto max-w-6xl px-4 py-24">
+ <p class="text-sm font-extrabold uppercase tracking-widest text-wa">Safe start · Fair billing</p>
+ <h2 class="h2 mt-2">Your time starts only when you say so.</h2>
+ <p class="mt-3 max-w-2xl text-lg text-slate-600">For your peace of mind, every visit begins with a one-time OTP. No OTP, no start, and no charge.</p>
+ <ol class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+  <li class="card"><div class="text-3xl">✅</div><h3 class="mt-3 font-display text-xl font-extrabold text-navy">1. We confirm</h3><p class="mt-1 text-sm">Our team confirms your booking on WhatsApp and shares your helper’s details.</p></li>
+  <li class="card"><div class="text-3xl">🔐</div><h3 class="mt-3 font-display text-xl font-extrabold text-navy">2. You receive an OTP</h3><p class="mt-1 text-sm">We send you a one-time OTP on WhatsApp.</p></li>
+  <li class="card"><div class="text-3xl">🤝</div><h3 class="mt-3 font-display text-xl font-extrabold text-navy">3. Helper arrives</h3><p class="mt-1 text-sm">Tell the OTP to your helper. They confirm it with our team to verify the meeting.</p></li>
+  <li class="card"><div class="text-3xl">⏱️</div><h3 class="mt-3 font-display text-xl font-extrabold text-navy">4. Time starts</h3><p class="mt-1 text-sm">Once verified, the service time starts. You pay Rs 99 per hour for the time worked.</p></li></ol>
+ <p class="mt-6 rounded-2xl border border-honey/60 bg-honey/15 p-4 text-sm text-navy"><strong>Please remember:</strong> share your OTP only with the OkBettiah helper standing in front of you. This website does not generate the OTP; our team sends it to you on WhatsApp after confirming your booking.</p>
+</section>
+
+<section id="safety" class="grid-bg bg-navy py-24 text-white">
+ <div class="mx-auto grid max-w-6xl gap-12 px-4 lg:grid-cols-[.9fr_1.1fr]">
+  <div><h2 class="font-display text-3xl font-extrabold tracking-tight sm:text-5xl">Your family deserves someone you can trust.</h2>
+   <p class="mt-4 text-lg text-white/75">Every helper is intended to be carefully selected and verified by our team before being assigned to customers. Service details and availability are confirmed with you before the visit.</p>
+   <div class="mt-8 rounded-3xl bg-honey p-6 text-ink"><p class="font-display text-4xl font-extrabold">Rs 99 per hour</p><p class="mt-2 font-semibold">Know what you’ll pay before we start. We confirm everything with you on WhatsApp before the service begins.</p></div></div>
+  <div class="grid gap-4 sm:grid-cols-2">
+   <div class="rounded-3xl border border-white/10 bg-white/5 p-5"><div class="text-2xl">🪪</div><h3 class="mt-2 font-bold">Identity verification</h3><p class="mt-1 text-sm text-white/65">Helpers are verified by our team.</p></div>
+   <div class="rounded-3xl border border-white/10 bg-white/5 p-5"><div class="text-2xl">🙋</div><h3 class="mt-2 font-bold">Human confirmation</h3><p class="mt-1 text-sm text-white/65">A real person confirms every request.</p></div>
+   <div class="rounded-3xl border border-white/10 bg-white/5 p-5"><div class="text-2xl">📋</div><h3 class="mt-2 font-bold">Clear service details</h3><p class="mt-1 text-sm text-white/65">You know what’s planned before the visit.</p></div>
+   <div class="rounded-3xl border border-white/10 bg-white/5 p-5"><div class="text-2xl">💬</div><h3 class="mt-2 font-bold">WhatsApp communication</h3><p class="mt-1 text-sm text-white/65">Everything in one familiar chat.</p></div>
+   <div class="rounded-3xl border border-white/10 bg-white/5 p-5 sm:col-span-2"><div class="text-2xl">🤝</div><h3 class="mt-2 font-bold">Customer support</h3><p class="mt-1 text-sm text-white/65">Reach us on WhatsApp if anything is unclear.</p></div></div>
+ </div>
+</section>
+
+<section class="mx-auto max-w-6xl px-4 py-24">
+ <h2 class="h2">Built for real life in Bettiah.</h2>
+ <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  <button data-service="elder" class="card text-left transition hover:-translate-y-1"><h3 class="font-display text-2xl font-extrabold text-navy">“I live in Delhi, but my parents are in Bettiah.”</h3><p class="mt-2 text-sm">Arrange local assistance when you can’t be there yourself.</p></button>
+  <button data-service="hospital" class="card text-left transition hover:-translate-y-1"><h3 class="font-display text-2xl font-extrabold text-navy">“My mother has a hospital appointment.”</h3><p class="mt-2 text-sm">Request someone to accompany her and help with the visit.</p></button>
+  <button data-service="errand" class="card text-left transition hover:-translate-y-1"><h3 class="font-display text-2xl font-extrabold text-navy">“I need someone to collect documents.”</h3><p class="mt-2 text-sm">Send a helper for a local errand.</p></button>
+  <button data-service="event" class="card text-left transition hover:-translate-y-1"><h3 class="font-display text-2xl font-extrabold text-navy">“I need help with an event.”</h3><p class="mt-2 text-sm">Get local assistance for errands and coordination.</p></button>
+  <div class="card bg-honey/20 sm:col-span-2"><h3 class="font-display text-2xl font-extrabold text-navy">“Something needs to be handled today.”</h3>
+   <p class="mt-2 text-sm">Need assistance right now? Tell us what you need and we’ll check whether a helper is available.</p>
+   <button data-wa-urgent class="btn-navy mt-4">Request Immediate Help</button>
+   <p class="mt-3 text-xs">For medical, police or fire emergencies, please contact the appropriate emergency service directly.</p></div>
+ </div>
+</section>
+
+<section id="faq" class="bg-mist py-24"><div class="mx-auto max-w-3xl px-4">
+ <h2 class="h2">Questions, answered.</h2>
+ <div id="faqList" class="mt-10 space-y-3"></div></div>
+</section>
+
+<section id="contact" class="mx-auto max-w-6xl px-4 py-24">
+ <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+  <div><p class="text-sm font-extrabold uppercase tracking-widest text-wa">Contact</p><h2 class="h2 mt-2">Have a question? We’d love to hear from you.</h2>
+   <p class="mt-3 text-lg text-slate-600">Write your name and message. It opens WhatsApp with everything ready to send to the OkBettiah team. We will reply on WhatsApp.</p>
+   <p class="mt-4 text-sm text-slate-500">📍 Bettiah, West Champaran, Bihar</p></div>
+  <form id="contactForm" novalidate class="card !p-8">
+   <label class="text-sm font-bold text-navy" for="cname">Your name</label><input class="field" id="cname" name="cname" autocomplete="name"><p id="err-cname" class="err" role="alert"></p>
+   <label class="mt-4 block text-sm font-bold text-navy" for="cmsg">Message</label><textarea class="field" id="cmsg" name="cmsg" rows="4" placeholder="How can we help you?"></textarea><p id="err-cmsg" class="err" role="alert"></p>
+   <button type="submit" class="btn-wa mt-5 w-full">Send Message on WhatsApp →</button>
+   <p id="contactSent" class="mt-3 hidden text-sm font-bold text-wa">Thank you! WhatsApp should have opened in a new tab. Tap send there to reach us.</p>
+  </form></div>
+</section>
+
+<section class="px-4 py-24">
+ <div class="grid-bg relative mx-auto max-w-5xl overflow-hidden rounded-[2.5rem] bg-navy p-10 text-center text-white sm:p-16">
+  <div class="absolute -left-20 -bottom-20 h-72 w-72 rounded-full bg-wag/20 blur-3xl" aria-hidden="true"></div>
+  <h2 class="relative font-display text-4xl font-extrabold tracking-tight sm:text-6xl">Need help in Bettiah? Just WhatsApp us.</h2>
+  <p class="relative mx-auto mt-4 max-w-xl text-white/75">No app. No account. Choose what you need, share a few details and continue the conversation on WhatsApp. Rs 99 per hour.</p>
+  <button data-open-booking class="btn-wa relative mt-8">Book on WhatsApp →</button></div>
+</section>
+</main>
+
+<footer class="bg-ink text-white/70">
+ <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2">
+  <div><img src="assets/logo-full.png" alt="OkBettiah. Need help in Bettiah? Just WhatsApp us." width="900" height="265" class="h-24 w-auto"><p class="mt-3 text-sm">📍 Bettiah, West Champaran, Bihar</p></div>
+  <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold text-white sm:justify-end" aria-label="Footer"><a href="#services">Services</a><a href="#how">How It Works</a><a href="#safety">Safety</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a href="#" data-wa-general>WhatsApp</a></nav>
+  <p class="text-xs sm:col-span-2">© 2026 OkBettiah. All rights reserved.<br>OkBettiah provides personal assistance and support services. It does not replace medical, police, fire or other emergency services.</p></div>
+</footer>
+
+<a href="#" data-wa-general class="fixed bottom-4 right-4 z-30 inline-flex items-center gap-2 rounded-full bg-wag px-5 py-3.5 font-extrabold text-ink shadow-xl shadow-wag/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy" style="bottom:max(1rem,env(safe-area-inset-bottom))">💬 <span class="hidden sm:inline">Chat on WhatsApp</span><span class="sm:hidden">WhatsApp Us</span></a>
+
+<!-- Booking modal -->
+<div id="modal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+ <div class="absolute inset-0 bg-ink/70 backdrop-blur-sm" data-close></div>
+ <div class="absolute inset-x-0 bottom-0 flex max-h-[92vh] flex-col rounded-t-[2rem] bg-white shadow-2xl sm:inset-auto sm:left-1/2 sm:top-1/2 sm:w-full sm:max-w-lg sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-[2rem]">
+  <div class="flex items-center justify-between px-6 pt-6"><div><h2 id="modalTitle" class="font-display text-2xl font-extrabold text-navy">Book a Service</h2><p id="stepLabel" class="text-sm font-semibold text-slate-500"></p></div>
+   <button data-close aria-label="Close" class="grid h-10 w-10 place-items-center rounded-full hover:bg-slate-100">✕</button></div>
+  <div class="mx-6 mt-3 h-2 rounded-full bg-slate-100"><div id="bar" class="h-2 rounded-full bg-honey transition-all" style="width:25%"></div></div>
+  <form id="bookingForm" novalidate class="flex min-h-0 flex-1 flex-col">
+   <div id="modalBody" class="flex-1 overflow-y-auto px-6 py-5">
+    <div data-step="1"><h3 class="font-bold text-navy">What do you need? <span class="font-semibold text-slate-500">· Rs 99 per hour</span></h3>
+     <div id="serviceChoices" class="mt-3 grid grid-cols-2 gap-2"></div><p id="err-service" class="err" role="alert"></p></div>
+    <div data-step="2" class="hidden space-y-4"><h3 class="font-bold text-navy">When and where?</h3>
+     <div><label class="text-sm font-bold" for="date">Date</label><input class="field" type="date" id="date" name="date"><p id="err-date" class="err" role="alert"></p></div>
+     <div><span class="text-sm font-bold">Time</span><div id="timeChoices" class="mt-1 grid grid-cols-2 gap-2"></div><p id="err-time" class="err" role="alert"></p></div>
+     <div><label class="text-sm font-bold" for="area">Area / locality in Bettiah</label><input class="field" id="area" name="area" placeholder="e.g. Ganj No. 1, Bettiah" autocomplete="off"><p id="err-area" class="err" role="alert"></p>
+      <p class="mt-1 text-xs text-slate-500">Area is enough. No need for your full address.</p></div></div>
+    <div data-step="3" class="hidden space-y-4"><h3 class="font-bold text-navy">Your details</h3>
+     <div><label class="text-sm font-bold" for="name">Name</label><input class="field" id="name" name="name" autocomplete="name"><p id="err-name" class="err" role="alert"></p></div>
+     <div><label class="text-sm font-bold" for="phone">WhatsApp number</label><input class="field" id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="98XXXXXXXX"><p id="err-phone" class="err" role="alert"></p></div>
+     <div><label class="text-sm font-bold" for="who">Who needs help?</label><select class="field" id="who" name="who"><option>Me</option><option selected>Parent</option><option>Relative</option><option>Someone else</option></select></div>
+     <div><label class="text-sm font-bold" for="notes">Additional details <span class="font-normal text-slate-500">(optional)</span></label><textarea class="field" id="notes" name="notes" rows="3" placeholder="My mother needs someone to accompany her to the doctor."></textarea></div></div>
+    <div data-step="4" class="hidden"><h3 class="font-bold text-navy">Review your request</h3>
+     <dl id="summary" class="mt-3 rounded-2xl bg-mist p-4 text-sm"></dl>
+     <p class="mt-3 rounded-2xl bg-honey/20 p-3 text-sm text-navy">Sending this opens WhatsApp. <strong>Your booking is only confirmed once the OkBettiah team replies with availability.</strong></p>
+     <p class="mt-3 text-center text-sm text-slate-600">Thank you for trusting OkBettiah. We will reply to you on WhatsApp as soon as we can. 🙏</p>
+     <p id="sentNote" class="mt-3 hidden text-sm font-bold text-wa">WhatsApp should have opened in a new tab. If not, tap the button again.</p></div>
+   </div>
+   <div class="flex items-center justify-between gap-3 border-t border-slate-100 px-6 py-4">
+    <button type="button" id="backBtn" class="rounded-full px-4 py-3 font-bold text-navy hover:bg-slate-100">← Back</button>
+    <button type="button" id="nextBtn" class="btn-navy !px-7 !py-3.5">Next →</button>
+    <button type="submit" id="sendBtn" class="btn-wa hidden !px-5 !py-3.5 text-sm sm:text-base">Send Booking Request on WhatsApp</button>
+   </div>
+  </form>
+ </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/whatsapp.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
